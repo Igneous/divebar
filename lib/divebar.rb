@@ -1,1 +1,6 @@
-require 'divebar/divebar'
+require 'divebar/instance'
+require 'divebar/plugin'
+require 'divebar/pluginlist'
+require 'divebar/viewlist'
+require 'divebar/config'
+require 'divebar/version'

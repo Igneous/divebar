@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'divebar'
+require 'divebar/plugins/clock'
+require 'divebar/plugins/loadavg'
+require 'divebar/drivers/output/stdout'
+require 'divebar/drivers/view/erb'
+
+divebar = Divebar::Instance.new
+
+divebar.config.update_interval = 1
+divebar.config.plugins.register Divebar::Plugin::Clock
+divebar.config.plugins.register Divebar::Plugin::Loadavg
+
+divebar.config.views.driver Divebar::Driver::View::Erb
+
+# Look in $PWD/views for a file named $name.erb
+divebar.config.views.register 'base'
+
+divebar.config.views.default 'base'
+
+divebar.config.output_driver Divebar::Driver::Output::Stdout
+
+divebar.start
