@@ -9,7 +9,7 @@ require 'divebar/drivers/output/xsetroot'
 
 divebar = Divebar::Instance.new
 
-divebar.config.update_interval 1
+divebar.config.update_interval  1
 divebar.config.plugins.register Divebar::Plugin::Clock
 divebar.config.plugins.register Divebar::Plugin::Loadavg
 divebar.config.views.driver     Divebar::Driver::View::Erb
