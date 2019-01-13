@@ -9,7 +9,15 @@ A ruby framework for building "status bar" applications. Currently is way-way-wa
 * Support for custom pluggable view drivers to render said data
 * Support for custom pluggable output drivers to display rendered views
 
+### Installation instructions
+
+```bash
+gem install divebar
+```
+
 ### Usage Example (see bin directory)
+
+
 ```ruby
 #!/usr/bin/env ruby
 # frozen_string_literal: true
